@@ -11,13 +11,16 @@
   "dependencies": {
     "@next/font": "13.1.6",
     "@nextui-org/react": "^1.0.0-beta.12",
+    "axios": "^0.27.2",
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
+    "ethers": "^5.7.2",
     "isomorphic-unfetch": "^3.0.0",
     "mongoose": "^6.6.5",
     "next": "13.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-icons": "^4.7.1"
+    "react-icons": "^4.7.1",
+    "wagmi": "^0.11.4"
   }
 }
