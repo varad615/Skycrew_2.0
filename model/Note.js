@@ -11,6 +11,28 @@ const NoteSchema = new mongoose.Schema({
     type: String,
     required: true,
     maxlength: [200, "Description cannot be more than 200 characters"]
+  },
+  subtitle: {
+    type: String,
+    required: true,
+    maxlength: [200, "Subtitle cannot be more than 200 characters"]
+  },
+  price: {
+    type: String,
+    required: true,
+    maxlength: [4, "price cannot be more than 200 characters"]
+  },
+  learn: {
+    type: String,
+    required: true,
+    maxlength: [200, "learn cannot be more than 200 characters"]
+  },
+  vimeo: {
+    type: String,
+    required: true
+  },
+  userid: {
+    type: String
   }
 });
 

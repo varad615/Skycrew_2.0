@@ -9,15 +9,17 @@ const Index = ({ notes }) => {
         <Link href="/profile">
           <Button color="secondary">Profile</Button>
         </Link>
-        <br />
-        <Link href="/Educator/mycourse">
-          <Button color="warning" flat>
-            Become a Educator
-          </Button>
+        <br/>
+        <Link href="/home">
+          <Button color="warning" flat>Back to student</Button>
+        </Link>
+        <br/>
+        <Link href="/Educator/new">
+          <Button color="warning" flat>Create New Course</Button>
         </Link>
         <br />
         <div>
-          <h1>Courses</h1>
+          <h1>My Courses</h1>
           <div>
             {notes.map((note) => {
               return (
@@ -27,7 +29,7 @@ const Index = ({ notes }) => {
                       <Link href={`/course/${note._id}`}>{note.title}</Link>
                     </Card.Header>
                     <Card.Body>
-                      <Link href={`/course/${note._id}`}>
+                      <Link href={`/Educator/course/${note._id}`}>
                         <Button>View</Button>
                       </Link>
                     </Card.Body>
