@@ -4,6 +4,7 @@ import { useAccount, useConnect, useSignMessage, useDisconnect } from "wagmi";
 import { useRouter } from "next/router";
 import { useAuthRequestChallengeEvm } from "@moralisweb3/next";
 import { Button } from "@nextui-org/react";
+import Image from "next/image";
 
 function SignIn() {
   const { connectAsync } = useConnect();
@@ -45,8 +46,10 @@ function SignIn() {
 
   return (
     <div>
-      <h3>Web3 Authentication</h3>
-      <Button onClick={handleAuth}>Connect Wallet</Button>
+      {/* <h3>Web3 Authentication</h3>
+      <Button onClick={handleAuth}>Connect Wallet</Button> */}
+      <Image src="fox.svg" width={300} height={300} />
+      
     </div>
   );
 }
