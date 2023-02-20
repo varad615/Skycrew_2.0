@@ -9,7 +9,14 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
-    extend: {}
+    extend: {
+      backgroundImage: {
+        'hero': "url('../public/hero-pattern.png')"
+      },
+      fontFamily: {
+        'oxy': ['Oxygen Mono', 'monospace']
+      },
+    }
   },
   plugins: []
 };
