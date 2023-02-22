@@ -6,8 +6,6 @@ import { getSession, signOut } from "next-auth/react";
 import Link from "next/link";
 
 const NewCourse = ({ user }) => {
-  const [userfind, setUserfind] = useState(user.address);
-
   const [form, setForm] = useState({
     title: "",
     description: "",
@@ -81,9 +79,7 @@ const NewCourse = ({ user }) => {
     if (!form.vimeo) {
       err.vimeo = "vimeo required";
     }
-    if (!form.userid) {
-      err.userid = "vimeo required";
-    }
+
     return err;
   };
   return (
@@ -151,11 +147,10 @@ const NewCourse = ({ user }) => {
             <br />
             User Id
             <Input
-              value={user.address}
-              onChange={(e) => {
-                form.userid = e.target.value;
-                setForm(form);
-              }}
+              label="What will you learn here"
+              placeholder="What will you learn here"
+              name="userid"
+              onChange={handleChange}
             />
             <br />
             <Button type="submit">Upload</Button>

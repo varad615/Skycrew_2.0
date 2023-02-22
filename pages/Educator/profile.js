@@ -1,8 +1,8 @@
 import { Card, Grid, Text, Link, Button } from "@nextui-org/react";
 import { getSession, signOut } from "next-auth/react";
 import { TbEdit, TbLogout } from "react-icons/tb";
-import styles from "../styles/Course.module.css";
-import Userprofile from "../public/profile.png";
+import styles from "../../styles/Course.module.css";
+import Userprofile from "../../public/profile.png"
 import Image from "next/image";
 
 function Profile({ user }) {
@@ -13,7 +13,7 @@ function Profile({ user }) {
         style={{ width: 3000, height: 190 }}
       />
       <div class="container mx-auto flex px-5 py-10 items-center justify-center flex-col">
-        <Image
+      <Image
           class="w-1/6 mb-10 object-cover object-center -m-36 rounded-full"
           alt="hero"
           src={Userprofile}
@@ -30,6 +30,9 @@ function Profile({ user }) {
             <Button color="error" onClick={() => signOut({ redirect: "/" })}>
               Logout
             </Button>
+            <Link href="/Educator/new">
+              <Button>New Course</Button>
+            </Link>
           </div>
         </div>
       </div>
@@ -107,13 +110,13 @@ export async function getServerSideProps(context) {
     return {
       redirect: {
         destination: "/",
-        permanent: false
-      }
+        permanent: false,
+      },
     };
   }
 
   return {
-    props: { user: session.user }
+    props: { user: session.user },
   };
 }
 export default Profile;

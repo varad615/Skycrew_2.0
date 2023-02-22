@@ -5,6 +5,7 @@ import Logo from "../../public/sclogo.png";
 import { FaUserCircle } from "react-icons/fa";
 import Image from "next/image";
 import styles from "../../styles/Course.module.css";
+import Intro from "../.././public/INTRO.png";
 
 const Index = ({ notes }) => {
   return (
@@ -17,7 +18,7 @@ const Index = ({ notes }) => {
               <a href="#" className="w-28 h-10 pl-5">
                 <Image src={Logo} width={100} height={100} />
               </a>
-              x
+
               <button
                 data-collapse-toggle="navbar-solid-bg"
                 type="button"
@@ -66,7 +67,7 @@ const Index = ({ notes }) => {
 
                   <li>
                     <Link
-                      href="/profile"
+                      href="/Educator/profile"
                       className="text-2xl font-semibold tracking-wide text-gray-700"
                     >
                       <FaUserCircle size="35px" color="#9556d3" />
@@ -78,15 +79,7 @@ const Index = ({ notes }) => {
           </nav>
         </div>
         {/* NAVBAR */}
-        <Link href="/profile">
-          <Button color="secondary">Profile</Button>
-        </Link>
 
-        <Link href="/Educator/new">
-          <Button color="warning" flat>
-            Create New Course
-          </Button>
-        </Link>
         <br />
         <div>
           <div class="container px-9 py-4 mx-auto">
@@ -97,9 +90,9 @@ const Index = ({ notes }) => {
                   return (
                     <div key={note._id} class="p-4 md:w-1/3">
                       <div className="h-full border-2 border-[#C4C4C4] border-opacity-60 bg-white rounded-lg overflow-hidden">
-                        <img
-                          class="lg:h-48 md:h-36 w-full object-cover object-center"
-                          src="https://dummyimage.com/720x400"
+                        <Image
+                          class="lg:h-48 w-full object-cover object-center"
+                          src={Intro}
                           alt="blog"
                         />
                         <div class="p-6">
@@ -126,7 +119,7 @@ const Index = ({ notes }) => {
                                 style={{ width: 388, height: 36 }}
                               >
                                 <p className="text-lg font-semibold tracking-wide text-white">
-                                  View
+                                  Edit Course
                                 </p>
                               </div>
                             </Link>

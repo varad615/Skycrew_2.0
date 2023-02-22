@@ -5,6 +5,7 @@ import styles from "../styles/Course.module.css";
 import Logo from "../public/sclogo.png";
 import Image from "next/image";
 import { FaUserCircle } from "react-icons/fa";
+import Intro from ".././public/INTRO.png";
 
 const Index = ({ notes }) => {
   const style = { color: "white", fontSize: "1.5em" };
@@ -48,7 +49,7 @@ const Index = ({ notes }) => {
                   <li>
                     <a
                       href="#"
-                      className="text-2xl font-semibold tracking-wide text-gray-700"
+                      className="text-2xl font-semibold tracking-wide text-[#9556D3]"
                       aria-current="page"
                     >
                       Courses
@@ -58,7 +59,7 @@ const Index = ({ notes }) => {
                   <li>
                     <Link
                       href="/Educator/mycourse"
-                      className="text-2xl font-semibold tracking-wide text-gray-700"
+                      className="text-2xl font-semibold tracking-wide text-gray-700 hover:text-[#c1aed5]"
                     >
                       Educator
                     </Link>
@@ -66,7 +67,7 @@ const Index = ({ notes }) => {
                   <li>
                     <Link
                       href="#"
-                      className="text-2xl font-semibold tracking-wide text-gray-700"
+                      className="text-2xl font-semibold tracking-wide text-gray-700 hover:text-[#c1aed5]"
                     >
                       About
                     </Link>
@@ -89,11 +90,11 @@ const Index = ({ notes }) => {
         <div>
           <div class="container px-9 py-4 mx-auto">
             <div className="relative" style={{ width: 145, height: 43 }}>
-              <p className="text-4xl text-black font-semibold tracking-wide">
+              <p className="text-3xl text-black font-semibold tracking-wide">
                 Courses
               </p>
             </div>
-            <p className="text-3xl tracking-wide text-black mb-4">
+            <p className="text-2xl tracking-wide text-black mb-4">
               Explore from a pool of community courses
             </p>
             <br />
@@ -102,9 +103,9 @@ const Index = ({ notes }) => {
                 return (
                   <div key={note._id} class="p-4 md:w-1/3">
                     <div className="h-full border-2 border-[#C4C4C4] border-opacity-60 bg-white rounded-lg overflow-hidden">
-                      <img
-                        class="lg:h-48 md:h-36 w-full object-cover object-center"
-                        src="https://dummyimage.com/720x400"
+                      <Image
+                        class="lg:h-48 w-full object-cover object-center"
+                        src={Intro}
                         alt="blog"
                       />
                       <div class="p-6">
@@ -113,7 +114,7 @@ const Index = ({ notes }) => {
                         </h2>
 
                         <p
-                          className="text-sm tracking-wide text-black"
+                          className="text-base tracking-wide text-black"
                           style={{ width: 397 }}
                         >
                           {note.subtitle}
