@@ -231,7 +231,7 @@ const Note = ({ note }) => {
           <Button auto flat color="success" onPress={closeHandler}>
             Close
           </Button>
-          <Button auto color="error" onPress={closeHandler}>
+          <Button auto color="error" onPress={handelDelete}>
             Delete
           </Button>
         </Modal.Footer>
